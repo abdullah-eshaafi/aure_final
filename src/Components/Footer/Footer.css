@@ -269,8 +269,13 @@ ul {
   .footer_img {
     margin-bottom: 120px;
   }
+
+  .img--fluid {
+    width: 100%;
+    height: 60%;
+  }
 }
 
-.user-select{
+.user-select {
   user-select: none;
 }

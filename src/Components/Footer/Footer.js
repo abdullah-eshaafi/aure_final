@@ -16,10 +16,6 @@ import close from "../../Resources/Images/Footer/close.svg";
 import axios from "axios";
 import { Link } from "react-router-dom";
 function Footer() {
-  useEffect(() => {
-    window.scroll(0, 0);
-  });
-
   const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // Regex for Email.
   const [email, setEmail] = useState("");
   const [spiner, setSpiner] = useState("");
@@ -46,10 +42,8 @@ function Footer() {
         setEmailClass("");
         setError_email("");
 
-        // console.log(Name + " " + number + " " + email + " " + text);
         Handle_Call_API();
       } else {
-        // console.log("email invalid");
         setError_email("Please enter a valid email");
         setEmailClass("error-field3");
       }
@@ -135,7 +129,7 @@ function Footer() {
           <Row>
             <Col className="d-xl-flex d-block px-0">
               <div className="col-xl-4 col-lg-12 col-12 px-0 d-flex">
-                <div className="col-xl-8 col-12">
+                <div className="col-xl-8 col-8 d-block mx-auto mx-md-0">
                   <div className="footer_heading">
                     <h4>Aurelian Origins</h4>
                   </div>
@@ -186,8 +180,8 @@ function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-4 d-xl-flex  d-block">
-                <div className="col-xl-5 col-8 ">
+              <div className="col-xl-4 d-xl-flex justify-content-md-start justify-content-center  d-block">
+                <div className="col-xl-5 col-8 d-block mx-auto">
                   <div className="footer_second_col_list">
                     <h5>Pages</h5>
                   </div>
@@ -216,7 +210,7 @@ function Footer() {
                     </ul>
                   </div>
                 </div>
-                <div className="col-5 col-8 ">
+                <div className="col-5 col-8  d-block mx-auto">
                   <div className="footer_second_col_list">
                     <h5>Contact Us</h5>
                   </div>
@@ -265,7 +259,7 @@ function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-4 col-12 d-flex justify-content-xl-end justify-content-start">
+              <div className="col-xl-4 col-12 d-flex justify-content-xl-end justify-content-md-start justify-content-center">
                 <div className="footer_img   col-xl-11">
                   <a
                     href="https://goo.gl/maps/R4k4VicYm55ChZsz6"
@@ -349,7 +343,9 @@ function Footer() {
                     </p>
                   </div>
                   <div className="collection_of_data">
-                    <h4 className="user-select">Collection of personal data:</h4>
+                    <h4 className="user-select">
+                      Collection of personal data:
+                    </h4>
                   </div>
                   <div className="privacy_modal_text">
                     <p className="user-select">
@@ -360,7 +356,9 @@ function Footer() {
                     </p>
                   </div>
                   <div className="collection_of_data">
-                    <h4 className="user-select">Collection of non-personal data:</h4>
+                    <h4 className="user-select">
+                      Collection of non-personal data:
+                    </h4>
                   </div>
                   <div className="privacy_modal_text">
                     <p className="user-select">
